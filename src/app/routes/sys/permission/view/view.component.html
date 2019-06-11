@@ -1,0 +1,15 @@
+<div class="modal-header">
+  <div class="modal-title">查看 {{ record.id }} 信息</div>
+</div>
+<nz-spin *ngIf="!sysPermission" class="modal-spin"></nz-spin>
+<div sv-container col="1" labelWidth="150" *ngIf="sysPermission">
+  <sv label="权限编号">{{ sysPermission.id }}</sv>
+  <sv label="权限名称">{{ sysPermission.name }}</sv>
+  <sv label="权限备注">{{sysPermission.remark}}</sv>
+  <sv label="权限状态" ><nz-tag [nzColor]="sysPermission.status.color">{{sysPermission.status.text}}</nz-tag></sv>
+  <sv label="修改时间">{{sysPermission.updateDateTime | _date: 'YYYY年MM月DD日HH时mm分ss秒'}}</sv>
+  <sv label="创建时间">{{sysPermission.createDateTime | _date: 'YYYY年MM月DD日HH时mm分ss秒'}}</sv>
+</div>
+<div class="modal-footer">
+  <button nz-button type="button" (click)="close()">关闭</button>
+</div>

@@ -1,0 +1,78 @@
+{
+  "app": {
+    "name": "Alain",
+    "description": "Ng-zorro admin panel front-end framework"
+  },
+  "user": {
+    "name": "Admin",
+    "avatar": "./assets/tmp/img/avatar.jpg",
+    "email": "cipchk@qq.com"
+  },
+  "menu": [
+    {
+      "text": "主导航",
+      "i18n": "menu.main",
+      "group": true,
+      "hideInBreadcrumb": true,
+      "children": [
+        {
+          "text": "系统管理",
+          "i18n": "menu.sys",
+          "icon": "anticon anticon-dashboard",
+          "children": [
+            {
+              "text": "用户管理",
+              "link": "/sys/user",
+              "i18n": "menu.sys.user"
+            },
+            {
+              "text": "角色管理",
+              "link": "/sys/role",
+              "i18n": "menu.sys.role"
+            },
+            {
+              "text": "权限管理",
+              "link": "/sys/permission",
+              "i18n": "menu.sys.permission"
+            },
+            {
+              "text": "API管理",
+              "link": "/sys/api",
+              "i18n": "menu.sys.api"
+            },
+            {
+              "text": "菜单管理",
+              "link": "/sys/menu",
+              "i18n": "menu.sys.menu"
+            },
+            {
+              "text": "字典管理",
+              "link": "/sys/dict",
+              "i18n": "menu.sys.dict"
+            },
+            {
+              "text": "参数管理",
+              "link": "/sys/parameter",
+              "i18n": "menu.sys.parameter"
+            },
+            {
+              "text": "定时任务",
+              "link": "/sys/timed-task",
+              "i18n": "menu.sys.timed-task"
+            },
+            {
+              "text": "定时任务日志",
+              "link": "/sys/timed-task-log",
+              "i18n": "menu.sys.timed-task-log"
+            },
+            {
+              "text": "DRUID管理",
+              "link": "/sys/druid",
+              "i18n": "menu.sys.druid"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

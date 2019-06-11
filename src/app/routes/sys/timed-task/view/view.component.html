@@ -1,0 +1,19 @@
+<div class="modal-header">
+  <div class="modal-title">查看 {{ record.id }} 信息</div>
+</div>
+<nz-spin *ngIf="!sysTimedTask" class="modal-spin"></nz-spin>
+<div sv-container col="1" labelWidth="150" *ngIf="sysTimedTask">
+  <sv label="任务标识">{{ sysTimedTask.code }}</sv>
+  <sv label="任务名称">{{ sysTimedTask.name }}</sv>
+  <sv label="任务类名">{{sysTimedTask.className}}</sv>
+  <sv label="corn表达式">{{sysTimedTask.cronExpression}}</sv>
+  <sv label="任务数据(json格式)">{{sysTimedTask.data}}</sv>
+  <sv label="任务类型" ><nz-tag [nzColor]="sysTimedTask.type.color">{{sysTimedTask.type.text}}</nz-tag></sv>
+  <sv label="备注">{{sysTimedTask.remark}}</sv>
+  <sv label="任务状态" ><nz-tag [nzColor]="sysTimedTask.status.color">{{sysTimedTask.status.text}}</nz-tag></sv>
+  <sv label="修改时间">{{sysTimedTask.updateDateTime | _date: 'YYYY年MM月DD日HH时mm分ss秒'}}</sv>
+  <sv label="创建时间">{{sysTimedTask.createDateTime | _date: 'YYYY年MM月DD日HH时mm分ss秒'}}</sv>
+</div>
+<div class="modal-footer">
+  <button nz-button type="button" (click)="close()">关闭</button>
+</div>
