@@ -65,9 +65,9 @@ export class SysApiComponent implements OnInit {
 
   ngOnInit() {
     zip(
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/SYS_API.HTTP_METHOD", {mode: 'promise', type: 's', expire: 86400}),
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/SYS_API.TYPE", {mode: 'promise', type: 's', expire: 86400}),
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/SYS_API.HTTP_METHOD", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/SYS_API.TYPE", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/STATUS", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([httpMethodTag, typeTag, statusTag]: any[]) => {
       this.columns = [
         {title: '编号', index: 'id'},
@@ -125,9 +125,9 @@ export class SysApiComponent implements OnInit {
     });
 
     zip(
-        this.cacheService.get("/chen/core/sys/dict/alain/select/SYS_API.HTTP_METHOD", {mode: 'promise', type: 's', expire: 86400}),
-        this.cacheService.get("/chen/core/sys/dict/alain/select/SYS_API.TYPE", {mode: 'promise', type: 's', expire: 86400}),
-        this.cacheService.get("/chen/core/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
+        this.cacheService.get("/chen/common/sys/dict/alain/select/SYS_API.HTTP_METHOD", {mode: 'promise', type: 's', expire: 86400}),
+        this.cacheService.get("/chen/common/sys/dict/alain/select/SYS_API.TYPE", {mode: 'promise', type: 's', expire: 86400}),
+        this.cacheService.get("/chen/common/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
       ).subscribe(([httpMethodSelect, typeSelect, statusSelect]: any[]) => {
 
       this.searchSchema = {

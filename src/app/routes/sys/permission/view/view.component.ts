@@ -21,7 +21,7 @@ export class SysPermissionViewComponent implements OnInit {
   ngOnInit(): void {
     zip(
       this.http.get(`/chen/admin/sys/permission/${this.record.id}`),
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/STATUS", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([sysPermission, statusTag]: any) => {
       sysPermission.status = statusTag[sysPermission.status];
       this.sysPermission = sysPermission;

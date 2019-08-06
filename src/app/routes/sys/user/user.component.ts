@@ -66,8 +66,8 @@ export class SysUserComponent implements OnInit {
 
   ngOnInit() {
     zip(
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/SYS_USER.STATUS", {mode: 'promise', type: 's', expire: 86400}),
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/SYS_USER.LEVEL", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/SYS_USER.STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/SYS_USER.LEVEL", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([sysUserStatusDict, sysUserLevelDict]: any[]) => {
       this.columns = [
         {title: '编号', index: 'id'},
@@ -136,8 +136,8 @@ export class SysUserComponent implements OnInit {
     });
 
     zip(
-      this.cacheService.get("/chen/core/sys/dict/alain/select/SYS_USER.STATUS", {mode: 'promise', type: 's', expire: 86400}),
-      this.cacheService.get("/chen/core/sys/dict/alain/select/SYS_USER.LEVEL", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/select/SYS_USER.STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/select/SYS_USER.LEVEL", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([sysUserStatusDict, sysUserLevelDict]: any) => {
 
       this.searchSchema = {

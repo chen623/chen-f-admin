@@ -82,7 +82,7 @@ export class SysRoleComponent implements OnInit {
 
 
     zip(
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/STATUS", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([statusDict]: any[]) => {
       this.columns = [
         {title: '编号', index: 'id'},
@@ -173,7 +173,7 @@ export class SysRoleComponent implements OnInit {
     });
 
     zip(
-      this.cacheService.get("/chen/core/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([statusDict]: any) => {
 
       this.searchSchema = {

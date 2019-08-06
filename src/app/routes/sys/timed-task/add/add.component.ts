@@ -29,8 +29,8 @@ export class SysTimedTaskAddComponent implements OnInit {
 
   ngOnInit(): void {
     zip(
-      this.cacheService.get("/chen/core/sys/dict/alain/select/SYS_TIMED_TASK.TYPE", {mode: 'promise', type: 's', expire: 86400}),
-      this.cacheService.get("/chen/core/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/select/SYS_TIMED_TASK.TYPE", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([sysTimedTaskTypeSelect, statusSelect]: any[]) => {
       this.schema = {
         properties: {

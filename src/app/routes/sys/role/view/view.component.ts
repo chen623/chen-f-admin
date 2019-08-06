@@ -23,7 +23,7 @@ export class SysRoleViewComponent implements OnInit {
 
     zip(
       this.http.get(`/chen/admin/sys/role/${this.record.id}`),
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/STATUS", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([sysRole, statusTag]: any) => {
       sysRole.status = statusTag[sysRole.status];
       this.sysRole = sysRole;

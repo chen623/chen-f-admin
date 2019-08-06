@@ -41,7 +41,7 @@ export class SysPermissionEditComponent implements OnInit {
     this.http.get(`/chen/admin/sys/permission/${this.record.id}`).subscribe(res => (this.sysPermission = res));
 
     zip(
-      this.cacheService.get("/chen/core/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([statusSelect]: any) => {
       this.schema = {
         properties: {

@@ -21,9 +21,9 @@ export class SysApiViewComponent implements OnInit {
   ngOnInit(): void {
     zip(
       this.http.get(`/chen/admin/sys/api/${this.record.id}`),
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/SYS_API.HTTP_METHOD", {mode: 'promise', type: 's', expire: 86400}),
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/SYS_API.TYPE", {mode: 'promise', type: 's', expire: 86400}),
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/SYS_API.HTTP_METHOD", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/SYS_API.TYPE", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/STATUS", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([sysApi,httpMethodTag, typeTag, statusTag]: any) => {
       sysApi.httpMethod = httpMethodTag[sysApi.httpMethod];
       sysApi.type = typeTag[sysApi.type];

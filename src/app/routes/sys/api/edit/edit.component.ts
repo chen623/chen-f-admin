@@ -41,9 +41,9 @@ export class SysApiEditComponent implements OnInit {
     this.http.get(`/chen/admin/sys/api/${this.record.id}`).subscribe(res => (this.sysApi = res));
 
     zip(
-      this.cacheService.get("/chen/core/sys/dict/alain/select/SYS_API.HTTP_METHOD", {mode: 'promise', type: 's', expire: 86400}),
-      this.cacheService.get("/chen/core/sys/dict/alain/select/SYS_API.TYPE", {mode: 'promise', type: 's', expire: 86400}),
-      this.cacheService.get("/chen/core/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/select/SYS_API.HTTP_METHOD", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/select/SYS_API.TYPE", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([httpMethodSelect, typeSelect, statusSelect]: any[]) => {
       this.schema = {
         properties: {

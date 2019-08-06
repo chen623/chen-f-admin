@@ -23,8 +23,8 @@ export class SysUserViewComponent implements OnInit {
 
     zip(
       this.http.get(`/chen/admin/sys/user/${this.record.id}`),
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/SYS_USER.STATUS", {mode: 'promise', type: 's', expire: 86400}),
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/SYS_USER.LEVEL", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/SYS_USER.STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/SYS_USER.LEVEL", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([sysUser, sysUserStatusTag, sysUserLevelTag]: any) => {
       sysUser.status = sysUserStatusTag[sysUser.status];
       sysUser.level = sysUserLevelTag[sysUser.level];

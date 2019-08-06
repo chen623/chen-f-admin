@@ -30,7 +30,7 @@ export class SysRoleAddComponent implements OnInit {
 
   ngOnInit(): void {
     zip(
-      this.cacheService.get("/chen/core/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([statusSelect]: any) => {
       this.schema = {
         properties: {

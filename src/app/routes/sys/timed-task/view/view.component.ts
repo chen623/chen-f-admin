@@ -23,8 +23,8 @@ export class SysTimedTaskViewComponent implements OnInit {
 
     zip(
       this.http.get(`/chen/admin/sys/timedTask/${this.record.code}`),
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/SYS_TIMED_TASK.TYPE", {mode: 'promise', type: 's', expire: 86400}),
-      this.cacheService.get("/chen/core/sys/dict/alain/tag/STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/SYS_TIMED_TASK.TYPE", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/tag/STATUS", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([sysTimedTask, sysTimedTaskTypeTag, statusTag]: any) => {
       sysTimedTask.type = sysTimedTaskTypeTag[sysTimedTask.type];
       sysTimedTask.status = statusTag[sysTimedTask.status];

@@ -44,8 +44,8 @@ export class SysUserEditComponent implements OnInit {
     this.http.get(`/chen/admin/sys/user/${this.record.id}`).subscribe(res => (this.sysUser = res));
 
     zip(
-    this.cacheService.get("/chen/core/sys/dict/alain/select/SYS_USER.STATUS", {mode: 'promise', type: 's', expire: 86400}),
-    this.cacheService.get("/chen/core/sys/dict/alain/select/SYS_USER.LEVEL", {mode: 'promise', type: 's', expire: 86400}),
+    this.cacheService.get("/chen/common/sys/dict/alain/select/SYS_USER.STATUS", {mode: 'promise', type: 's', expire: 86400}),
+    this.cacheService.get("/chen/common/sys/dict/alain/select/SYS_USER.LEVEL", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([sysUserStatusSelect, sysUserLevelSelect]: any) => {
       this.schema = {
         properties: {

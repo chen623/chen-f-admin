@@ -41,8 +41,8 @@ export class SysTimedTaskEditComponent implements OnInit {
     this.http.get(`/chen/admin/sys/timedTask/${this.record.code}`).subscribe(res => (this.sysTimedTask = res));
 
     zip(
-      this.cacheService.get("/chen/core/sys/dict/alain/select/SYS_TIMED_TASK.TYPE", {mode: 'promise', type: 's', expire: 86400}),
-      this.cacheService.get("/chen/core/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/select/SYS_TIMED_TASK.TYPE", {mode: 'promise', type: 's', expire: 86400}),
+      this.cacheService.get("/chen/common/sys/dict/alain/select/STATUS", {mode: 'promise', type: 's', expire: 86400}),
     ).subscribe(([sysTimedTaskTypeSelect, statusSelect]: any[]) => {
       this.schema = {
         properties: {
